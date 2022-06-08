@@ -20,7 +20,7 @@ class Article(models.Model):
         get_latest_by='publishing_date'
 
     def __str__(self):
-        return sel.title[:50]
+        return self.title[:50]
 
     def get_absolute_url(self):
         return reverse('article_details',kwargs={'pk':self.pk})
