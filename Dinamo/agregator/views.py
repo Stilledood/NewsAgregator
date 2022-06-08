@@ -4,6 +4,9 @@ from django.views import View
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 
 class ArticleList(View):
+    '''Class to construct a view to display all articles from data base using pagination(5 elements on a page)'''
+
+
     template_name='article_list.html'
     model=Article
     paginated_by=10
@@ -39,6 +42,10 @@ class ArticleList(View):
 
         return render(request,self.template_name,context=context)
 
-    
 
+
+class ArticleDetails(View):
+    '''Class to construct a view to display details about an article'''
+
+    pass
 
