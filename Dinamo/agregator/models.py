@@ -14,6 +14,7 @@ class Article(models.Model):
     publishing_date=models.DateTimeField()
     link=models.URLField(max_length=256)
 
+
     class Meta:
         ordering=['-publishing_date','title']
         get_latest_by='publishing_date'
