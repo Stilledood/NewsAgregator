@@ -37,6 +37,7 @@ class Comment(models.Model):
     body=models.TextField()
     author=models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     date_added=models.DateTimeField(auto_now_add=True)
+    article=models.ForeignKey(Article,on_delete=models.CASCADE)
 
     class Meta:
         ordering=['-date_added']

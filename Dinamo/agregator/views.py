@@ -8,7 +8,7 @@ class ArticleList(View):
     '''Class to construct a view to display all articles from data base using pagination(5 elements on a page)'''
 
 
-    template_name='article_list.html'
+    template_name='agregator/article_list.html'
     model=Article
     paginated_by=10
     page_kwargs='page'
@@ -16,7 +16,7 @@ class ArticleList(View):
     def get(self,request):
         article_list=self.model.objects.all()
         paginator=Paginator(article_list,self.paginated_by)
-        page_number=request.GET(self.page_kwargs)
+        page_number=request.GET.get(self.page_kwargs)
         try:
             page=paginator.page(page_number)
         except EmptyPage:
@@ -49,7 +49,7 @@ class ArticleDetails(View):
     '''Class to construct a view to display details about an article'''
 
     model=Article
-    template_name='article_details.html'
+    template_name='agregator/article_details.html'
     form_class=CommentForm
 
     def get(self,request,pk):
