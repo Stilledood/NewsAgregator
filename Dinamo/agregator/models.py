@@ -11,7 +11,7 @@ class Article(models.Model):
     image=models.ImageField(upload_to='news_images')
     description=models.TextField()
     publishing_site=models.CharField(max_length=128)
-    publishind_date=models.DateTimeField()
+    publishing_date=models.DateTimeField()
     link=models.URLField(max_length=256)
 
     class Meta:
@@ -39,7 +39,7 @@ class Comment(models.Model):
 
     class Meta:
         ordering=['-date_added']
-        det_latest_by='date_added'
+        get_latest_by='date_added'
 
     def __str__(self):
         if len(self.body)> 30:

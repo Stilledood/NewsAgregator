@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404,redirect
 from .models import Article,Comment
 from django.views import View
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
+from .forms import CommentForm
 
 class ArticleList(View):
     '''Class to construct a view to display all articles from data base using pagination(5 elements on a page)'''
@@ -47,5 +48,32 @@ class ArticleList(View):
 class ArticleDetails(View):
     '''Class to construct a view to display details about an article'''
 
-    pass
+    model=Article
+    template_name='article_details.html'
+    form_class=CommentForm
+
+    def get(self,request,pk):
+        article=get_object_or_404(self.model,pk=pk)
+        context={
+            'article':article,
+            'form':self.form_class()
+        }
+        return render(request,self.template_name,context=context)
+
+    def post(self,request,pk):
+        article=get_object_or_404(self.model,pk=pk)
+        bound_form=self.form_class(request.POST)
+        if bound_form.is_valid():
+            comm=bound_form.save(commit=False)
+            comm.article=article
+            comm.author=self.request.user
+            comm.save()
+            return  redirect(article.get_absolute_url())
+        else:
+            context={
+                'article':article,
+                'form':bound_form
+            }
+            return render(request,self.template_name,context=context)
+
 
