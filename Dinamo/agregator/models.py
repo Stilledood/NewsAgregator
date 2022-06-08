@@ -1,5 +1,6 @@
 from django.db import models
 from django.shortcuts import redirect,render,get_object_or_404,reverse
+from django.conf import settings
 
 
 
@@ -29,7 +30,25 @@ class Article(models.Model):
     def get_delete_url(self):
         return reverse('article_delete',kwargs={'pk':self.pk})
 
+class Comment(models.Model):
+    '''Class to construct a model for comments'''
 
+    body=models.TextField()
+    author=models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+    date_added=models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering=['-date_added']
+        det_latest_by='date_added'
+
+    def __str__(self):
+        if len(self.body)> 30:
+            return self.body[:30]
+        return self.body
+
+    def get_delete_url(self):
+        return reverse('delete_comment',kwargs={'pk':self.pk})
+    
 
 
 
