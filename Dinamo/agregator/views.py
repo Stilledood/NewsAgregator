@@ -55,8 +55,6 @@ class ArticleDetails(View):
 
     def get(self,request,pk):
         article=get_object_or_404(self.model,pk=pk)
-        next_article_pk=article.pk+1
-        previous_article_pk=article.pk-1
         context={
             'article':article,
             'form':self.form_class(),
@@ -82,3 +80,80 @@ class ArticleDetails(View):
             return render(request,self.template_name,context=context)
 
 
+class GspArticlesList(View):
+    '''Class to display only GSP articles'''
+    template_name='agregator/gsp_articles.html'
+    model=Article
+    page_kwargs='page'
+    paginated_by=5
+
+
+    def get(self,request):
+        articles=self.model.objects.filter(publishing_site='GSP')
+        paginator=Paginator(articles,self.paginated_by)
+        page_number=request.GET.get(self.page_kwargs)
+
+        try:
+            page=Paginator(page_number)
+        except EmptyPage:
+            page=paginator.page(paginator.num_pages)
+        except PageNotAnInteger:
+            page=paginator.page(1)
+
+        if page.has_previous():
+            previous_page_url=f"?{self.page_kwargs}={page.previous_page_number()}"
+        else:
+            previous_page_url=None
+
+        if page.has_next():
+            next_page_url=f"?{self.page_kwargs}={page.next_page_number()}"
+        else:
+            next_page_url=None
+
+        context={
+            'page':page,
+            'paginator':paginator,
+            'previous_page_url':previous_page_url,
+            'next_page_url':next_page_url,
+        }
+
+        return render(request,self.template_name,context=context)
+
+
+class ProsportArticlesList(View):
+    '''Class to display only GSP articles'''
+    template_name = 'agregator/prosport_articles.html'
+    model = Article
+    page_kwargs = 'page'
+    paginated_by = 5
+
+    def get(self, request):
+        articles = self.model.objects.filter(publishing_site='Prosport')
+        paginator = Paginator(articles, self.paginated_by)
+        page_number = request.GET.get(self.page_kwargs)
+
+        try:
+            page = Paginator(page_number)
+        except EmptyPage:
+            page = paginator.page(paginator.num_pages)
+        except PageNotAnInteger:
+            page = paginator.page(1)
+
+        if page.has_previous():
+            previous_page_url = f"?{self.page_kwargs}={page.previous_page_number()}"
+        else:
+            previous_page_url = None
+
+        if page.has_next():
+            next_page_url = f"?{self.page_kwargs}={page.next_page_number()}"
+        else:
+            next_page_url = None
+
+        context = {
+            'page': page,
+            'paginator': paginator,
+            'previous_page_url': previous_page_url,
+            'next_page_url': next_page_url,
+        }
+
+        return render(request, self.template_name, context=context)
