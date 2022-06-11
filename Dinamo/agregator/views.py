@@ -10,11 +10,12 @@ class ArticleList(View):
 
     template_name='agregator/article_list.html'
     model=Article
-    paginated_by=10
+    paginated_by=5
     page_kwargs='page'
 
     def get(self,request):
         article_list=self.model.objects.all()
+
         paginator=Paginator(article_list,self.paginated_by)
         page_number=request.GET.get(self.page_kwargs)
         try:
@@ -25,12 +26,12 @@ class ArticleList(View):
             page=paginator.page(1)
 
         if page.has_previous():
-            previous_page_url=f"?P{self.page_kwargs}={page.previous_page_number()}"
+            previous_page_url=f"?{self.page_kwargs}={page.previous_page_number()}"
         else:
             previous_page_url=None
 
         if page.has_next():
-            next_page_url=f"?P{self.page_kwargs}={page.next_page_number()}"
+            next_page_url=f"?{self.page_kwargs}={page.next_page_number()}"
         else:
             next_page_url=None
 
@@ -54,9 +55,13 @@ class ArticleDetails(View):
 
     def get(self,request,pk):
         article=get_object_or_404(self.model,pk=pk)
+        next_article_pk=article.pk+1
+        previous_article_pk=article.pk-1
         context={
             'article':article,
-            'form':self.form_class()
+            'form':self.form_class(),
+            'next_article':next_article_pk,
+            'previous_article':previous_article_pk
         }
         return render(request,self.template_name,context=context)
 

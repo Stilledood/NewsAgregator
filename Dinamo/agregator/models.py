@@ -11,8 +11,10 @@ class Article(models.Model):
     image=models.ImageField(upload_to='news_images')
     description=models.TextField()
     publishing_site=models.CharField(max_length=128)
-    publishing_date=models.DateTimeField()
+    publishing_date=models.DateField()
     link=models.URLField(max_length=256)
+    guid=models.CharField(max_length=50)
+
 
 
     class Meta:
