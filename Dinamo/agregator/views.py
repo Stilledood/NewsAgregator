@@ -94,7 +94,7 @@ class GspArticlesList(View):
         page_number=request.GET.get(self.page_kwargs)
 
         try:
-            page=Paginator(page_number)
+            page=paginator.page(page_number)
         except EmptyPage:
             page=paginator.page(paginator.num_pages)
         except PageNotAnInteger:
@@ -111,7 +111,7 @@ class GspArticlesList(View):
             next_page_url=None
 
         context={
-            'page':page,
+            'article_list':page,
             'paginator':paginator,
             'previous_page_url':previous_page_url,
             'next_page_url':next_page_url,
@@ -121,7 +121,7 @@ class GspArticlesList(View):
 
 
 class ProsportArticlesList(View):
-    '''Class to display only GSP articles'''
+    '''Class to display only Prosport articles'''
     template_name = 'agregator/prosport_articles.html'
     model = Article
     page_kwargs = 'page'
@@ -133,7 +133,7 @@ class ProsportArticlesList(View):
         page_number = request.GET.get(self.page_kwargs)
 
         try:
-            page = Paginator(page_number)
+            page = paginator.page(page_number)
         except EmptyPage:
             page = paginator.page(paginator.num_pages)
         except PageNotAnInteger:
@@ -150,7 +150,7 @@ class ProsportArticlesList(View):
             next_page_url = None
 
         context = {
-            'page': page,
+            'article_list': page,
             'paginator': paginator,
             'previous_page_url': previous_page_url,
             'next_page_url': next_page_url,
