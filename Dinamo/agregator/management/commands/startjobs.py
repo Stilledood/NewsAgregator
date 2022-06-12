@@ -7,7 +7,7 @@ from apscheduler.triggers.cron import CronTrigger
 from django_apscheduler.jobstores import DjangoJobStore
 from django_apscheduler.models import DjangoJobExecution
 from django.conf import settings
-import regex
+import regex as re
 from agregator.models import Article
 
 

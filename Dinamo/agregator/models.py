@@ -55,4 +55,12 @@ class Comment(models.Model):
 
 
 
+class Graph(models.Model):
+    '''class to create models for statiscal graphs'''
+
+    week_graphic=models.ImageField(upload_to='statistics/week')
+    month_graph=models.ImageField(upload_to='statistics/month')
+    gsp_vs_prosport=models.ImageField(upload_to='statistics/vs')
+    overall=models.ImageField(upload_to='statistics/overall')
+
 

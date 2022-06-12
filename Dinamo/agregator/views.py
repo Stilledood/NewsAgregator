@@ -3,6 +3,10 @@ from .models import Article,Comment
 from django.views import View
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 from .forms import CommentForm
+import pandas as pd
+import seaborn as sns
+
+
 
 class ArticleList(View):
     '''Class to construct a view to display all articles from data base using pagination(5 elements on a page)'''
@@ -157,3 +161,8 @@ class ProsportArticlesList(View):
         }
 
         return render(request, self.template_name, context=context)
+
+
+
+
+
