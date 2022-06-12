@@ -9,6 +9,7 @@ from django_apscheduler.models import DjangoJobExecution
 from django.conf import settings
 import regex as re
 from agregator.models import Article
+import pandas as pd
 
 
 def save_new_articles(feed):
@@ -32,6 +33,13 @@ def save_new_articles(feed):
                                       publishing_date=parser.parse(item['published'][:-5]), link=item['link'],
                                       image=item['links'][1]['href'], guid=m)
                     article.save()
+
+def create_graphs():
+    '''function to create all graphs'''
+
+    dataframe=pd.DataFrame.from_records(Article.objects.all().values())
+
+    print(dataframe.dtypes)
 
 
 def fetch_gsp_articles():
@@ -62,6 +70,7 @@ class Command(BaseCommand):
         scheduler.add_jobstore(DjangoJobStore(),'default')
         scheduler.add_job(fetch_gsp_articles,trigger='interval',minutes=2,id='Gsp Articles',max_instances=1,replace_existing=True)
         scheduler.add_job(fetch_prosport_article,trigger='interval',minutes=2,id='Prosport Articles',max_instances=1,replace_existing=True)
+        scheduler.add_job(create_graphs, trigger='interval', minutes=2, id='Graph', max_instances=1,replace_existing=True)
 
         try:
             scheduler.start()

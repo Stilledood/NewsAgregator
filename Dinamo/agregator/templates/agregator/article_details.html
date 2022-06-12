@@ -1,0 +1,45 @@
+
+{% extends parent_template|default:'agregator/agg_base.html'%}
+{% load static %}
+{% block content %}
+<div class="main-wrapper">
+
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container">
+			    <div class="item mb-5">
+                        <div class="media">
+                            <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="{{article.image}}" alt="image">
+                            <div class="media-body">
+                                <h3 class="title mb-1"><a href="blog-post.html">{{article.title}}</a></h3>
+                                <div class="meta mb-1"><span class="date">Published By: {{article.publishing_site}} on  {{article.publishing_date}}</span><span class="comment"> Comments<a href="#">        {{article.comment_set.count}}</a></span></div>
+
+
+                            </div><!--//media-body-->
+                        </div><!--//media-->
+                    </div><!--//item-->
+
+			    <div class="blog-post-body">
+                    <p>{{article.description}}</p>
+
+
+			    </div>
+
+			    <nav class="blog-nav nav nav-justified my-5">
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="{% url 'article_details' pk=article.previous_pk }">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+				  <a class="nav-link-next nav-item nav-link rounded-right" href="blog-list.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				</nav>
+
+				
+
+		    </div><!--//container-->
+	    </article>
+
+	    <section class="promo-section theme-bg-light py-5 text-center">
+		    <div class="container">
+			    <h2 class="title">Promo Section Heading</h2>
+			    <p>You can use this section to promote your side projects etc. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                <figure class="promo-figure">
+			        <a href="https://made4dev.com" target="_blank"><img class="img-fluid" src="assets/images/promo-banner.jpg" alt="image"></a>
+			    </figure>
+		    </div><!--//container-->
+{% endblock content %}
