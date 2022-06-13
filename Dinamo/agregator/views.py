@@ -5,6 +5,9 @@ from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 from .forms import CommentForm
 import pandas as pd
 import seaborn as sns
+from datetime import datetime,date,timedelta
+from plotly.offline import plot
+from plotly.graph_objects import Scatter,Pie,Bar
 
 
 
@@ -162,7 +165,28 @@ class ProsportArticlesList(View):
 
         return render(request, self.template_name, context=context)
 
+class GraphView(View):
+
+    '''Class to display some satistical graphs'''
+    template_name='agregator/statistic.html'
+
+    def get(self,request):
+
+        dataframe=pd.DataFrame.from_records(Article.objects.all().values())
+        dataframe['date']=pd.to_datetime(dataframe['publishing_date']).dt.date
+
+        prev_week_start=date.today()-timedelta(weeks=1)
+        this_week_dataframe=dataframe.loc[dataframe['date']>prev_week_start]['date'].value_counts()
+        plot_week=plot([Scatter(x=this_week_dataframe.index,y=this_week_dataframe.values,mode='lines',opacity=0.8,marker_color='green')],output_type='div')
 
 
+        last_month=date.today()-timedelta(weeks=4)
+        this_month_data=dataframe.loc[dataframe['date']>last_month]['date'].value_counts()
+        this_month_plot=plot([Scatter(x=this_month_data.index,y=this_month_data.values,mode='lines',opacity=0.8,marker_color='red')],output_type='div')
 
 
+        overall=dataframe['publishing_site'].value_counts()
+        bar_chart=plot([Bar(x=['GSP','Prosport'],y=overall.values)],output_type='div')
+
+
+        return render(request, self.template_name, context={'plot_week': plot_week,'plot_month':this_month_plot,'overall_plot':bar_chart})

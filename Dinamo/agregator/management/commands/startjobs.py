@@ -1,6 +1,10 @@
+import base64
+import urllib.parse
+
 import feedparser
+import matplotlib.pyplot as plt
 from dateutil import parser
-from agregator.models import Article
+from agregator.models import Article,Graph
 from django.core.management.base import BaseCommand
 from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.cron import CronTrigger
@@ -10,6 +14,11 @@ from django.conf import settings
 import regex as re
 from agregator.models import Article
 import pandas as pd
+from datetime import timedelta,time,date
+import io
+from PIL import Image
+from django.core.files.base import ContentFile
+import os,shutil
 
 
 def save_new_articles(feed):
@@ -23,7 +32,7 @@ def save_new_articles(feed):
                 guid_gsp=item['gsp_articol_id']
                 if len(Article.objects.filter(guid=guid_gsp)) == 0:
                     article=Article(title=item['title'],description=item['summary'],publishing_site=feed_title,publishing_date=parser.parse(item['published'][:-5]),link=item['link'],image=item['links'][1]['href'],guid=item['gsp_articol_id'])
-                    print(article.title)
+
                     article.save()
             elif feed_title == 'Prosport':
                 x=item['id']
@@ -34,12 +43,14 @@ def save_new_articles(feed):
                                       image=item['links'][1]['href'], guid=m)
                     article.save()
 
-def create_graphs():
-    '''function to create all graphs'''
 
-    dataframe=pd.DataFrame.from_records(Article.objects.all().values())
 
-    print(dataframe.dtypes)
+
+
+
+
+
+
 
 
 def fetch_gsp_articles():
@@ -70,7 +81,7 @@ class Command(BaseCommand):
         scheduler.add_jobstore(DjangoJobStore(),'default')
         scheduler.add_job(fetch_gsp_articles,trigger='interval',minutes=2,id='Gsp Articles',max_instances=1,replace_existing=True)
         scheduler.add_job(fetch_prosport_article,trigger='interval',minutes=2,id='Prosport Articles',max_instances=1,replace_existing=True)
-        scheduler.add_job(create_graphs, trigger='interval', minutes=2, id='Graph', max_instances=1,replace_existing=True)
+
 
         try:
             scheduler.start()
