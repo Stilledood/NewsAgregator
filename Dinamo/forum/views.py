@@ -91,7 +91,7 @@ class TopicDetails(View):
 
 
 
-class Questions(View):
+class QuestionList(View):
     '''Class to display all questions '''
 
     template_name = 'forum/question_list.html'
@@ -159,4 +159,3 @@ class QuestionDetails(View):
         else:
             return render(request, self.template_name, {'topic': question, 'form': bound_form})
 
-        
