@@ -98,7 +98,7 @@ class Answers(models.Model):
     def get_delete_url(self):
         return reverse('question-delete',kwargs={'pk':self.pk})
 
-    
+
 
 
 
