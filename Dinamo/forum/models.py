@@ -74,3 +74,31 @@ class Questions(models.Model):
     def get_delete_url(self):
         return reverse('question_delete',kwargs={'pk':self.pk})
 
+
+class Answers(models.Model):
+    '''Class to construct a model for question answers'''
+
+    body=models.TextField()
+    date_added=models.DateField(auto_now_add=True)
+    author=models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+    question=models.ForeignKey(Questions,on_delete=models.CASCADE)
+
+    class Meta:
+        ordering=['-date_added']
+        get_latest_by='date_added'
+
+    def __str__(self):
+        if len(self.body) >30:
+            return self.body[:30]
+        return self.body
+
+    def get_update_url(self):
+        return reverse('answer_update',kwargs={'pk':self.pk})
+
+    def get_delete_url(self):
+        return reverse('question-delete',kwargs={'pk':self.pk})
+
+    
+
+
+
