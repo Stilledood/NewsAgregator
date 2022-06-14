@@ -91,4 +91,72 @@ class TopicDetails(View):
 
 
 
+class Questions(View):
+    '''Class to display all questions '''
 
+    template_name = 'forum/question_list.html'
+    model = Questions
+    page_kwargs = 'page'
+    paginated_by = 10
+
+    def get(self, request):
+        topics = self.model.objects.all()
+        paginator = Paginator(topics, self.paginated_by)
+        page_number = request.GET.get(self.page_kwargs)
+
+        try:
+            page = paginator.page(page_number)
+        except PageNotAnInteger:
+            page = paginator.page(1)
+        except EmptyPage:
+            page = paginator.page(paginator.num_pages)
+
+        if page.has_previous():
+            previous_page_url = f"?{self.page_kwargs}={page.previous_page_number()}"
+        else:
+            previous_page_url = None
+
+        if page.has_next():
+            next_page_url = f"?{self.page_kwargs}={page.next_page_number()}"
+        else:
+            next_page_url = None
+
+        context = {
+            'topics': page,
+            'paginator': paginator,
+            'previous_page_url': previous_page_url,
+            'next_page_url': next_page_url
+        }
+
+        return render(request, self.template_name, context=context)
+
+
+class QuestionDetails(View):
+    '''Class to create a view to display details of a question'''
+
+    template_name = 'forum/question_details.html'
+    model = Questions
+    form_class = AnswerForm
+
+    def get(self, request, pk):
+        topic = get_object_or_404(self.model, pk=pk)
+        context = {
+            'topic': topic,
+            'form': self.form_class()
+        }
+
+        return render(request, self.template_name, context=context)
+
+    def post(self, request, pk):
+        question = get_object_or_404(self.model, pk=pk)
+        bound_form = self.form_class(request.POST)
+        if bound_form.is_valid():
+            new_answer= bound_form.save(commit=False)
+            new_answer.question = question
+            new_answer.author = self.request.user
+            new_answer.save()
+            return redirect(question.get_absolute_url())
+        else:
+            return render(request, self.template_name, {'topic': question, 'form': bound_form})
+
+        

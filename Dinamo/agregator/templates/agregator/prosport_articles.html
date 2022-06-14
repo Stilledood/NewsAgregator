@@ -28,13 +28,13 @@
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">Posted : {{article.publishing_date}}</a></li>
                                     <li class="breadcrumb-item"><a href="#">Posted by: {{article.publishing_site}}</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Comments: {{article.comment_set.count}}</a></li>
+
                              </ol>
 
                                 <h2 class="card-title h4">{{article.title}}</h2>
                                 <p class="card-text">{{article.description}}</p>
 
-                                <button type="button" class="btn btn-danger" ><a href="{{article.get_absolute_url}}"> Read More</a></button>
+                                <button type="button" class="btn btn-danger" ><a href="{{article.link}}"> Read More</a></button>
                             </div>
 
                         </div>
