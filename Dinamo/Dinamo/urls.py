@@ -19,10 +19,12 @@ from agregator import urls as agg_urls
 from django.views.generic import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
+from user import urls as user_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'^news/',include(agg_urls))
+    re_path(r'^news/',include(agg_urls)),
+    re_path(r'^user/',include(user_urls,namespace='dj-auth'))
 ]
 
 if settings.DEBUG:
