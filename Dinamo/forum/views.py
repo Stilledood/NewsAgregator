@@ -59,7 +59,12 @@ class TopicList(View):
         }
 
         return render(request,self.template_name,context=context)
-    
+
+class TopicDetails(View):
+    '''Class to construct a view to see a topic details'''
+
+    template_name='forum/topic_details.html'
+    model=Topics
 
 
 
