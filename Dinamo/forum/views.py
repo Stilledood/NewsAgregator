@@ -2,6 +2,7 @@ from django.shortcuts import render,get_object_or_404,redirect
 from .models import Topics,Answers,Questions,Comment
 from django.views.generic import View
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
+from .forms import CommentForm,AnswerForm
 
 
 class GenericView(View):
@@ -65,6 +66,29 @@ class TopicDetails(View):
 
     template_name='forum/topic_details.html'
     model=Topics
+    form_class=CommentForm
+
+    def get(self,request,pk):
+        topic=get_object_or_404(self.model,pk=pk)
+        context={
+            'topic':topic,
+            'form':self.form_class()
+        }
+
+        return render(request,self.template_name,context=context)
+
+    def post(self,request,pk):
+        topic=get_object_or_404(self.model,pk=pk)
+        bound_form=self.form_class(request.POST)
+        if bound_form.is_valid():
+            new_comm=bound_form.save(commit=False)
+            new_comm.topic=topic
+            new_comm.author=self.request.user
+            new_comm.save()
+            return redirect(topic.get_absolute_url())
+        else:
+            return render(request,self.template_name,{'topic':topic,'form':bound_form})
+
 
 
 
