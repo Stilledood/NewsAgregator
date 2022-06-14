@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'agregator',
     'django_apscheduler',
-    'user'
+    'user',
+    'forum'
 ]
 
 MIDDLEWARE = [

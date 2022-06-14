@@ -33,34 +33,7 @@ class Article(models.Model):
     def get_delete_url(self):
         return reverse('article_delete',kwargs={'pk':self.pk})
 
-class Comment(models.Model):
-    '''Class to construct a model for comments'''
-
-    body=models.TextField()
-    author=models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
-    date_added=models.DateTimeField(auto_now_add=True)
-    article=models.ForeignKey(Article,on_delete=models.CASCADE)
-
-    class Meta:
-        ordering=['-date_added']
-        get_latest_by='date_added'
-
-    def __str__(self):
-        if len(self.body)> 30:
-            return self.body[:30]
-        return self.body
-
-    def get_delete_url(self):
-        return reverse('delete_comment',kwargs={'pk':self.pk})
 
 
-
-class Graph(models.Model):
-    '''class to create models for statiscal graphs'''
-
-    week_graphic=models.ImageField(upload_to='statistics',default=None)
-    month_graph=models.ImageField(upload_to='statistics',default=None)
-    gsp_vs_prosport=models.ImageField(upload_to='statistics',default=None)
-    overall=models.ImageField(upload_to='statistics',default=True)
 
 

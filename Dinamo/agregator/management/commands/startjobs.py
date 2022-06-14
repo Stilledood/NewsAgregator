@@ -4,7 +4,7 @@ import urllib.parse
 import feedparser
 import matplotlib.pyplot as plt
 from dateutil import parser
-from agregator.models import Article,Graph
+
 from django.core.management.base import BaseCommand
 from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.cron import CronTrigger

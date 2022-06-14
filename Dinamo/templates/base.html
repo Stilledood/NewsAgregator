@@ -46,7 +46,7 @@
           <a class="nav-link" href="#">Contact</a>
         </li>
           <li class="nav-item">
-          <a class="nav-link" href="#">Log In</a>
+          <a class="nav-link" href="{% url 'dj-auth:login' %}?next={{request.path}}">Log In</a>
         </li>
 
       </ul>
