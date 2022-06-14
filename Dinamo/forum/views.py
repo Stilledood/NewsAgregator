@@ -2,7 +2,7 @@ from django.shortcuts import render,get_object_or_404,redirect
 from .models import Topics,Answers,Questions,Comment
 from django.views.generic import View
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
-from .forms import CommentForm,AnswerForm
+from .forms import CommentForm,AnswerForm,TopicForm,QuestionForm
 
 
 class GenericView(View):
@@ -88,6 +88,25 @@ class TopicDetails(View):
             return redirect(topic.get_absolute_url())
         else:
             return render(request,self.template_name,{'topic':topic,'form':bound_form})
+
+class AddTopic(View):
+    '''Class to construct a view to add topic objects'''
+
+    template_name='forum/add_topic.html'
+    form_class=TopicForm
+
+    def get(self,request):
+        return render(request,self.template_name,context={'form':self.form_class})
+
+    def post(self,request):
+        bound_form=self.form_class(request.POST)
+        if bound_form.is_valid():
+            new_topic=bound_form.save(commit=False)
+            new_topic.author=self.request.user
+            new_topic.save()
+            return redirect(new_topic.get_absolute_url())
+        else:
+            return render(request,self.template_name,{'form':bound_form})
 
 
 
