@@ -102,7 +102,7 @@ class AddTopic(View):
         bound_form=self.form_class(request.POST)
         if bound_form.is_valid():
             new_topic=bound_form.save(commit=False)
-            new_topic.author=self.request.user
+            new_topic.posted_by=self.request.user
             new_topic.save()
             return redirect(new_topic.get_absolute_url())
         else:
@@ -178,3 +178,20 @@ class QuestionDetails(View):
         else:
             return render(request, self.template_name, {'topic': question, 'form': bound_form})
 
+class AddQuestion(View):
+    '''Class to construct a view so the users can add questions to the site'''
+
+    template_name='forum/add_question.html'
+    form_class=QuestionForm
+
+    def get(self,request):
+        return render(request,self.template_name,{'form':self.form_class()})
+
+    def post(self,request):
+        bound_form=self.form_class(request.POST)
+        if bound_form.is_valid():
+            new_question=bound_form.save(commit=False)
+            new_question.author=self.request.user
+            new_question.save()
+            return redirect(new_question.get_absolute_url())
+        
