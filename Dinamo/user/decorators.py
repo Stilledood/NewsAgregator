@@ -28,3 +28,5 @@ def class_permission_required(permission):
     return decorator
 
 
+
+

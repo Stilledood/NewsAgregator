@@ -139,3 +139,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL=reverse_lazy('dj-auth:login')
 LOGOUT_URL=reverse_lazy('dj-auth:logout')
 LOGIN_REDIRECT_URL=reverse_lazy('article_list')
+
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
