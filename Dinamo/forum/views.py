@@ -108,6 +108,36 @@ class AddTopic(View):
         else:
             return render(request,self.template_name,{'form':bound_form})
 
+class EditTopic(View):
+    '''Class to construct a view to edit a topic'''
+
+    model=Topics
+    form_class=TopicForm
+    template_name='forum/edit_topic.html'
+
+    def get(self,request,pk):
+        topic=get_object_or_404(self.model,pk=pk)
+        context={
+            'topic':topic,
+            'form':self.form_class(instance=topic)
+        }
+        return render(request,self.template_name,context=context)
+
+    def post(self,request,pk):
+        topic=get_object_or_404(self.model,pk=pk)
+        bound_form=self.form_class(request.POST,instance=topic)
+        if bound_form.is_valid():
+            edited_topic=bound_form.save()
+            return redirect(edited_topic.get_absolute_url())
+        else:
+            context={
+                'topic':topic,
+                'form':bound_form
+            }
+
+            return render(request,self.template_name,context=context)
+
+        
 
 
 class QuestionList(View):
@@ -194,4 +224,28 @@ class AddQuestion(View):
             new_question.author=self.request.user
             new_question.save()
             return redirect(new_question.get_absolute_url())
-        
+
+class EditQuestion(View):
+    '''Class to construct a view to let user update their own questions'''
+
+    template_name='forum/edit_question.html'
+    model_name=Questions
+    form_class=QuestionForm
+
+    def get(self,request,pk):
+        question=get_object_or_404(self.model,pk=pk)
+        return render(request,self.template_name,{'form':self.form_class(instance=question),'question':question})
+
+    def post(self,request,pk):
+        question=get_object_or_404(self.model_name,pk=pk)
+        bound_form=self.form_class(request.POST,instance=question)
+        if bound_form.is_valid():
+            updated_question=bound_form.save()
+            return redirect(updated_question.get_absolute_url())
+        else:
+            context={
+                'question':question,
+                'form':bound_form
+            }
+
+            return render(request,self.template_name,context=context)
