@@ -137,7 +137,7 @@ class EditTopic(View):
 
             return render(request,self.template_name,context=context)
 
-        
+
 
 
 class QuestionList(View):
