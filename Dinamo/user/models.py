@@ -23,4 +23,9 @@ class Profile(models.Model):
     def get_update_url(self):
         return reverse('profile_update',kwargs={'username':self.username})
 
-    
+
+@receiver(post_save,sender=User)
+def update_user_profile(sender,instance,created,**kwargs):
+    if created:
+        Profile.objects.create(user=instance)
+        
