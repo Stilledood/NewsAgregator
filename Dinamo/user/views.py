@@ -115,4 +115,4 @@ class ProfileUpdate(View):
             return redirect(new_profile.get_absolute_url())
         else:
             return render(request,self.template_name,{'profile':profile,'form':bound_form})
-        
+
