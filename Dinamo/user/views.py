@@ -6,7 +6,14 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_protect
 from django.template.response import TemplateResponse
 from django.contrib.auth.decorators import login_required
-
+from .forms import SignUpForm,ProfileForm
+from .models import Profile
+from django.contrib.sites.shortcuts import get_current_site
+from django.template.loader import render_to_string
+from django.utils.encoding import force_bytes,force_str
+from django.utils.http import urlsafe_base64_encode,urlsafe_base64_decode
+from .tokens import accountactivationtoken
+from django.contrib import messages
 
 class DisableUser(View):
     '''Class to construct a view to disable user account'''
@@ -28,6 +35,33 @@ class DisableUser(View):
         user.save()
         logout(request)
         return  redirect(self.success_url)
+
+
+
+class SignUp(View):
+    '''Class to construct a view for SIgn Up Process'''
+
+    form_class=SignUpForm
+    template_name='user/signup.html'
+
+    def get(self,request):
+        return render(request,self.template_name,{'form':self.form_class()})
+
+    def post(self,request):
+        bound_form=self.form_class(request.POST)
+        if bound_form.is_valid():
+            user=bound_form.save(commit=False)
+            user.is_active=False
+            user.save()
+            Profile.objects.update_or_create(user=user,defaults={'username':user.get_username()})
+            current_site=get_current_site()
+            subject='Activate Your account'
+            message=render_to_string('user/account_activation_email.html',{'user':user,'domain':current_site.domain,'uid':urlsafe_base64_encode(force_str(user.pk)),'token':accountactivationtoken.make_token(user)})
+            user.email_user(subject,message)
+            messages.success(request,'Please confirm your email')
+            return redirect('dj-auth:login')
+        else:
+            return  render(request,self.template_name,{'form':bound_form})
 
 
 
