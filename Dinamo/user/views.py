@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.conf import settings
 from django.views.generic import View
 from django.contrib.auth import get_user,logout
@@ -87,3 +87,13 @@ class AccountActivation(View):
 
 class ProfileDetails(View):
     '''Class to construct a view to see all profile details'''
+
+    model=Profile
+    template_name='user/profile.html'
+
+    def get(self,request,username):
+        profile=get_object_or_404(self.model,username=username)
+        return render(request,self.template_name,{'profile':profile})
+
+
+
