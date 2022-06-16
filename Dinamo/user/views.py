@@ -14,6 +14,7 @@ from django.utils.encoding import force_bytes,force_str
 from django.utils.http import urlsafe_base64_encode,urlsafe_base64_decode
 from .tokens import accountactivationtoken
 from django.contrib import messages
+from django.contrib.auth.models import User
 
 class DisableUser(View):
     '''Class to construct a view to disable user account'''
@@ -64,4 +65,25 @@ class SignUp(View):
             return  render(request,self.template_name,{'form':bound_form})
 
 
+class AccountActivation(View):
+    '''Class to create a view to verify email link and activate account'''
 
+    def get(self,request,uidb64,token):
+        try:
+            uid=force_str(urlsafe_base64_decode(uidb64))
+            user=User.objects.get(pk=uid)
+        except (TypeError,ValueError,OverflowError):
+            user=None
+
+        if user != None and accountactivationtoken.check_token(user,token):
+            user.is_active=True
+            user.profile.email_confirmed=True
+            user.save()
+            Profile.objects.update_or_create(user=user,defaults={''})
+            return redirect('dj-auth:login')
+        else:
+            messages.warning(request,'Confirmation link isa no longer available')
+            return  redirect('dj-auth:signup')
+
+class ProfileDetails(View):
+    '''Class to construct a view to see all profile details'''
