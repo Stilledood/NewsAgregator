@@ -96,4 +96,23 @@ class ProfileDetails(View):
         return render(request,self.template_name,{'profile':profile})
 
 
+class ProfileUpdate(View):
+    '''Class to construct a view to allow a user to change his/her profile details'''
 
+    model=Profile
+    form_class=ProfileForm
+    template_name='user/profile_update.html'
+
+    def get(self,request,username):
+        profile=get_object_or_404(self.model,username=username)
+        return render(request,self.template_name,{'profile':profile,'form':self.form_class(instance=profile)})
+
+    def post(self,request,username):
+        profile=get_object_or_404(self.model,username=username)
+        bound_form=self.form_class(request.POST,instance=profile)
+        if bound_form.is_valid():
+            new_profile=bound_form.save()
+            return redirect(new_profile.get_absolute_url())
+        else:
+            return render(request,self.template_name,{'profile':profile,'form':bound_form})
+        
