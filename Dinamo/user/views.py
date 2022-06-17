@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect,get_object_or_404
+from django.shortcuts import render,redirect,get_object_or_404,reverse
 from django.conf import settings
 from django.views.generic import View
 from django.contrib.auth import get_user,logout
@@ -55,9 +55,9 @@ class SignUp(View):
             user.is_active=False
             user.save()
             Profile.objects.update_or_create(user=user,defaults={'username':user.get_username()})
-            current_site=get_current_site()
+            current_site=get_current_site(request)
             subject='Activate Your account'
-            message=render_to_string('user/account_activation_email.html',{'user':user,'domain':current_site.domain,'uid':urlsafe_base64_encode(force_str(user.pk)),'token':accountactivationtoken.make_token(user)})
+            message=render_to_string('user/account_activation_email.html',{'user':user,'domain':current_site.domain,'uid':urlsafe_base64_encode(force_bytes(user.pk)),'token':accountactivationtoken.make_token(user)})
             user.email_user(subject,message)
             messages.success(request,'Please confirm your email')
             return redirect('dj-auth:login')
@@ -79,7 +79,7 @@ class AccountActivation(View):
             user.is_active=True
             user.profile.email_confirmed=True
             user.save()
-            Profile.objects.update_or_create(user=user,defaults={''})
+            Profile.objects.update_or_create(user=user,defaults={' '})
             return redirect('dj-auth:login')
         else:
             messages.warning(request,'Confirmation link isa no longer available')
@@ -93,6 +93,7 @@ class ProfileDetails(View):
 
     def get(self,request,username):
         profile=get_object_or_404(self.model,username=username)
+        print(profile.image)
         return render(request,self.template_name,{'profile':profile})
 
 
@@ -109,9 +110,12 @@ class ProfileUpdate(View):
 
     def post(self,request,username):
         profile=get_object_or_404(self.model,username=username)
-        bound_form=self.form_class(request.POST,instance=profile)
+        bound_form=self.form_class(request.POST,request.FILES,instance=profile)
         if bound_form.is_valid():
-            new_profile=bound_form.save()
+            new_profile = bound_form.save()
+
+
+
             return redirect(new_profile.get_absolute_url())
         else:
             return render(request,self.template_name,{'profile':profile,'form':bound_form})

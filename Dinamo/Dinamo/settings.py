@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'agregator',
     'django_apscheduler',
     'user',
-    'forum'
+    'forum',
+    'contact',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,9 @@ LOGOUT_URL=reverse_lazy('dj-auth:logout')
 LOGIN_REDIRECT_URL=reverse_lazy('article_list')
 
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+SERVER_EMAIL='contact@dinamonews.ro'
+DEFAULT_FROM_EMAIL='no-reply@dinamonews.ro'
+EMAIL_SUBJECT_PREFIX='[Dinamo News]'
+MANAGERS=(
+    'Us','ourselves@dinamonews.ro'
+)

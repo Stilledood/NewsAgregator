@@ -145,17 +145,20 @@ class GraphView(View):
         dataframe['date']=pd.to_datetime(dataframe['publishing_date']).dt.date
 
         prev_week_start=date.today()-timedelta(weeks=1)
-        this_week_dataframe=dataframe.loc[dataframe['date']>prev_week_start]['date'].value_counts()
+        this_week_dataframe=dataframe.loc[dataframe['date']>prev_week_start]['date'].value_counts().sort_index()
         plot_week=plot([Scatter(x=this_week_dataframe.index,y=this_week_dataframe.values,mode='lines',opacity=0.8,marker_color='green')],output_type='div')
+        articles_week=this_week_dataframe.values.sum()
 
 
         last_month=date.today()-timedelta(weeks=4)
-        this_month_data=dataframe.loc[dataframe['date']>last_month]['date'].value_counts()
+        this_month_data=dataframe.loc[dataframe['date']>last_month]['date'].value_counts().sort_index()
         this_month_plot=plot([Scatter(x=this_month_data.index,y=this_month_data.values,mode='lines',opacity=0.8,marker_color='red')],output_type='div')
+        articles_month=this_month_data.values.sum()
 
 
         overall=dataframe['publishing_site'].value_counts()
         bar_chart=plot([Bar(x=['GSP','Prosport'],y=overall.values)],output_type='div')
 
 
-        return render(request, self.template_name, context={'plot_week': plot_week,'plot_month':this_month_plot,'overall_plot':bar_chart})
+
+        return render(request, self.template_name, context={'plot_week': plot_week,'plot_month':this_month_plot,'overall_plot':bar_chart,'nr_articles_week':articles_week,'nr_articles_month':articles_month})
