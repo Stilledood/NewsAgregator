@@ -1,0 +1,8 @@
+{% extends parent_template|default:'contact/contact_base.html' %}
+{% block content %}
+<form action="{% url 'contact' %}" method="post">
+  {% csrf_token %}
+  {{form.as_p}}
+  <button type="submit">Send Email</button>
+</form>
+{% endblock content %}

@@ -145,6 +145,6 @@ EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 SERVER_EMAIL='contact@dinamonews.ro'
 DEFAULT_FROM_EMAIL='no-reply@dinamonews.ro'
 EMAIL_SUBJECT_PREFIX='[Dinamo News]'
-MANAGERS=(
-    'Us','ourselves@dinamonews.ro'
-)
+MANAGERS=[
+    ('Us','ourselves@dinamonews.ro'),
+]

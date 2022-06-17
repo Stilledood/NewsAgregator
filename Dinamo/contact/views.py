@@ -9,7 +9,7 @@ class Contact(View):
     '''Class to construct a view to allow user to send emails'''
 
     form_class=ContactForm
-    template_name='user/contact.html'
+    template_name='contact/contact.html'
 
     def get(self,request):
         return render(request,self.template_name,{'form':self.form_class})
@@ -24,7 +24,7 @@ class Contact(View):
         else:
             return render(request,self.template_name,{'form':bound_form})
 
-        
+
 
 
 
