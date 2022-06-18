@@ -23,6 +23,7 @@ from user import urls as user_urls
 from forum import urls as forum_urls
 from django.views.generic import RedirectView
 from contact import urls as contact_urls
+from django.contrib import admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,3 +36,6 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+admin.site.site_header='Dinamo News'
+admin.site.site_title='Dinamo News'

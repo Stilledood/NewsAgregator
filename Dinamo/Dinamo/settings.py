@@ -148,3 +148,4 @@ EMAIL_SUBJECT_PREFIX='[Dinamo News]'
 MANAGERS=[
     ('Us','ourselves@dinamonews.ro'),
 ]
+
