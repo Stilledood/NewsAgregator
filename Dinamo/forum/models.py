@@ -28,6 +28,8 @@ class Topics(models.Model):
         return reverse('topic_delete',kwargs={'pk':self.pk})
 
 
+
+
 class Comment(models.Model):
     '''Class to construct a model for topic comments'''
 
