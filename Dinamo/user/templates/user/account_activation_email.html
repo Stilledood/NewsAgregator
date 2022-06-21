@@ -1,0 +1,5 @@
+{% autoescape off %}
+Hello , {{user.username}}
+Please click on the bellow link to activate your account
+http://{{domain}}{% url 'dj-auth:activate_account' uidb64=uid token=token %}
+{% endautoescape %}

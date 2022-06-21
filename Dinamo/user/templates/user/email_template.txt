@@ -1,0 +1,6 @@
+Hello from {{site.name}}
+We have received a request to reset password for {{user.get_username}}
+If you did not requested to change your password please ignore this email!!!!
+
+To reset your password please use this link:
+{{protocol}}//{{domain}}{% url 'dj-auth:password_reset_confirm' uid token %}
