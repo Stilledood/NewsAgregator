@@ -3,6 +3,10 @@ from .models import Topics,Answers,Questions,Comment
 from django.views.generic import View
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 from .forms import CommentForm,AnswerForm,TopicForm,QuestionForm
+from user.decorators import class_login_required,class_permission_required
+from django.utils.decorators import  method_decorator
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import get_user
 
 
 class GenericView(View):
@@ -76,7 +80,7 @@ class TopicDetails(View):
         }
 
         return render(request,self.template_name,context=context)
-
+    @method_decorator(login_required)
     def post(self,request,pk):
         topic=get_object_or_404(self.model,pk=pk)
         bound_form=self.form_class(request.POST)
@@ -89,6 +93,8 @@ class TopicDetails(View):
         else:
             return render(request,self.template_name,{'topic':topic,'form':bound_form})
 
+
+@class_permission_required('forum.add_topics')
 class AddTopic(View):
     '''Class to construct a view to add topic objects'''
 
@@ -108,6 +114,8 @@ class AddTopic(View):
         else:
             return render(request,self.template_name,{'form':bound_form})
 
+
+@class_permission_required('forum.change_topic')
 class EditTopic(View):
     '''Class to construct a view to edit a topic'''
 
@@ -149,8 +157,8 @@ class QuestionList(View):
     paginated_by = 10
 
     def get(self, request):
-        topics = self.model.objects.all()
-        paginator = Paginator(topics, self.paginated_by)
+        questions = self.model.objects.all()
+        paginator = Paginator(questions, self.paginated_by)
         page_number = request.GET.get(self.page_kwargs)
 
         try:
@@ -171,7 +179,7 @@ class QuestionList(View):
             next_page_url = None
 
         context = {
-            'topics': page,
+            'questions': page,
             'paginator': paginator,
             'previous_page_url': previous_page_url,
             'next_page_url': next_page_url
@@ -190,12 +198,12 @@ class QuestionDetails(View):
     def get(self, request, pk):
         topic = get_object_or_404(self.model, pk=pk)
         context = {
-            'topic': topic,
+            'question': topic,
             'form': self.form_class()
         }
 
         return render(request, self.template_name, context=context)
-
+    @method_decorator(login_required)
     def post(self, request, pk):
         question = get_object_or_404(self.model, pk=pk)
         bound_form = self.form_class(request.POST)
@@ -206,16 +214,20 @@ class QuestionDetails(View):
             new_answer.save()
             return redirect(question.get_absolute_url())
         else:
-            return render(request, self.template_name, {'topic': question, 'form': bound_form})
+            return render(request, self.template_name, {'question': question, 'form': bound_form})
 
+
+@class_login_required
 class AddQuestion(View):
     '''Class to construct a view so the users can add questions to the site'''
 
     template_name='forum/add_question.html'
     form_class=QuestionForm
+    model=Questions
 
     def get(self,request):
-        return render(request,self.template_name,{'form':self.form_class()})
+        latest_questions=self.model.objects.all()[:5]
+        return render(request,self.template_name,{'form':self.form_class(),'latest':latest_questions})
 
     def post(self,request):
         bound_form=self.form_class(request.POST)
@@ -224,6 +236,7 @@ class AddQuestion(View):
             new_question.author=self.request.user
             new_question.save()
             return redirect(new_question.get_absolute_url())
+
 
 class EditQuestion(View):
     '''Class to construct a view to let user update their own questions'''
@@ -249,3 +262,4 @@ class EditQuestion(View):
             }
 
             return render(request,self.template_name,context=context)
+

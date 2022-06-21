@@ -1,6 +1,33 @@
 {% extends parent_template|default:'user/base_user.html' %}
 
 {% block content %}
-<h3>Succssfully Log Out</h3>
-{% include 'user/login_form.html' with login_button='Log Back In' %}
+
+
+
+<main id="main" class="main">
+
+    <div class="pagetitle" >
+
+        <nav>
+            <ol class="breadcrumb" style="padding-left:900px">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Log Out</li>
+            </ol>
+        </nav>
+    </div>
+    <section class="section" style="padding-left:910px">
+      <div class="row">
+        <div class="col-lg-6">
+
+            <div class="mt-4 grid grid-cols-2 gap-8 xl:grid-cols-2">
+                <button type="button" class="btn btn-outline-primary" ><a href="{% url 'dj-auth:login' %}"> Log Back In</a></button>
+                <div class="flex flex-col">
+
+                </div>
+            </div>
+
+    </section>
+
+
+</main>
 {% endblock content %}

@@ -13,7 +13,7 @@ class TopicAdmin(admin.ModelAdmin):
 
 
     fieldsets = (
-        ('Main',{'fields':('title',)}),
+        ('Main',{'fields':('title','short_description')}),
         ('Related',{'fields':('posted_by',)})
     )
 
@@ -27,6 +27,13 @@ class TopicAdmin(admin.ModelAdmin):
 
     comm_count.short_description='Number of comments'
     comm_count.admin_order_field='comm_number'
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    '''Class to create a custom admin view for comments'''
+
+    list_display = ['body']
 
 
 

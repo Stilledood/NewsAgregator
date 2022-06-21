@@ -22,7 +22,7 @@ class TopicForm(forms.ModelForm):
 
     class Meta:
         model=Topics
-        fields=['title']
+        fields=['title','short_description']
 
 class QuestionForm(forms.ModelForm):
     '''Class to create a form for question models'''

@@ -6,6 +6,7 @@ class Topics(models.Model):
     '''Class to construct a model for admins added topics'''
 
     title=models.CharField(max_length=256)
+    short_description=models.TextField(default=None)
     date_added=models.DateField(auto_now_add=True)
     posted_by=models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
 

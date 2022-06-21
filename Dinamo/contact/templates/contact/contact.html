@@ -1,8 +1,101 @@
 {% extends parent_template|default:'contact/contact_base.html' %}
 {% block content %}
-<form action="{% url 'contact' %}" method="post">
-  {% csrf_token %}
-  {{form.as_p}}
-  <button type="submit">Send Email</button>
-</form>
+{% load static %}
+{% load crispy_forms_tags %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+
+
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/quill/quill.snow.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/simple-datatables/style.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style3.css' %}" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Contact Us</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Contact</li>
+            </ol>
+        </nav>
+    </div>
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-6">
+              <h5 class="card-title">Send Us  A  email</h5>
+            <div class="mt-4 grid grid-cols-2 gap-8 xl:grid-cols-2">
+                <div class="flex flex-col">
+                    <form method="post" action="{% url 'contact' %}">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="form-group col-md-6 mb-0">
+                                {{ form.email|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-md-8 mb-1">
+                                {{ form.text|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6 mb-0">
+                                {{ form.reason|as_crispy_field }}
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="height:50px "  s>Send Email</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+          <div class="col-lg-6">
+              <h5 class="card-title">Latest Forum Topics</h5>
+            <div class="mt-4 grid grid-cols-2 gap-8 xl:grid-cols-2">
+                <div class="flex flex-col">
+                    {% for topic in topics %}
+                    <p class="text-muted"><a href="{{topic.get_absolute_url}}"> {{topic.title}}</a></p>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+
+</main>
+
+
+
+
+
+
+
 {% endblock content %}
