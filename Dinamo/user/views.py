@@ -120,3 +120,15 @@ class ProfileUpdate(View):
         else:
             return render(request,self.template_name,{'profile':profile,'form':bound_form})
 
+class UserQuestions(View):
+    '''Class to create a view to display all questions posted by a user'''
+
+    model=Profile
+    template_name='user/user_questions.html'
+
+    def get(self,request,username):
+
+        profile=get_object_or_404(self.model,username=username)
+        question_list=profile.user.questions_set.all()
+
+        return render(request,self.template_name,{'questions':question_list})

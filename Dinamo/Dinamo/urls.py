@@ -21,7 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from user import urls as user_urls
 from forum import urls as forum_urls
-from django.views.generic import RedirectView
+from django.views.generic import RedirectView,TemplateView
 from contact import urls as contact_urls
 from django.contrib import admin
 
@@ -31,7 +31,8 @@ urlpatterns = [
     re_path(r'^news/',include(agg_urls)),
     re_path(r'^user/',include(user_urls,namespace='dj-auth')),
     re_path(r'forum/',include(forum_urls)),
-    re_path(r'^contact/',include(contact_urls))
+    re_path(r'^contact/',include(contact_urls)),
+
 ]
 
 if settings.DEBUG:
