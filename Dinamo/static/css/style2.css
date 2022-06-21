@@ -818,18 +818,18 @@ p {
 }
 
 .h1 {
-  font-size: 4rem;
-  font-weight: 900
+  font-size: 2rem;
+  font-weight: 400
 }
 
 .h2 {
-  font-size: 3rem;
+  font-size: 1rem;
   font-weight: 800
 }
 
 .h3 {
-  font-size: 2.25rem;
-  font-weight: 800
+  font-size: 1.25rem;
+  font-weight: 400
 }
 
 .h4 {
@@ -8847,7 +8847,7 @@ div.code-toolbar .toolbar button:hover {
 }
 
 .p-8{
-  padding: 2rem;
+  padding: 12rem;
 }
 
 .p-10{

@@ -30,9 +30,9 @@
             <div class="py-4 ml-12">
                 <h1 class="h4">Weekly Statistics</h1>
             </div>
-                <div class="alert alert-dark mb-6">
+                <div class="alert alert-light mb-6">
 
-                    <a class="ml-2" target="_blank" href="""><center>Weekly Statistics</center></a>
+                    <p class="text-muted"><center>Weekly Statistics</center></p>
         </div>
 
                 <p class="text-white text-xs"></p>
@@ -55,9 +55,9 @@
             <div class="py-4 ml-12">
                 <h1 class="h4">Monthly Statistics</h1>
             </div>
-                <div class="alert alert-dark mb-6">
+                <div class="alert alert-light mb-6">
 
-                    <a class="ml-2" target="_blank" href="""><center>Monthly Statistics</center></a>
+                    <p class="text-muted"><center>Monthly Statistics</center></p>
         </div>
 
                 <p class="text-white text-xs"></p>
@@ -72,7 +72,7 @@
         </div>
 
         <!-- charts -->
-        <div class="grid grid-cols-2 gap-6 h-full">
+        <div class="grid grid-cols-3 gap-6 h-full">
 
 
                 </div>
@@ -84,15 +84,15 @@
 
 
     <div class="flex flex-col">
-         <div class="card bg-grey-350 border-red-350 shadow-md text-white">
+         <div class="card bg-grey-370 border-red-390 shadow-md text-white">
         <div class="card-body flex flex-row">
             <div class="image  center">{{overall_plot|safe}}
             <div class="py-4 ml-12">
                 <h1 class="h4">GSP vs Prosport Statistics</h1>
             </div>
-                <div class="alert alert-dark mb-6">
+                <div class="alert alert-light mb-6">
 
-                    <a class="ml-2" target="_blank" href="""><center>GSP vs Prosport</center></a>
+                    <p class="text-muted"><center>GSP vs Prosport</center></p>
         </div>
                 <p class="text-white text-xs"></p>
 
@@ -101,28 +101,29 @@
          </div>
 
     </div>
-     <div class="flex flex-col">
-            <div class="card-header flex flex-row justify-center">
-                <h1 class="h6"><center>Number of Articles This Week</center></h1>
+     <div class="flex flex-col" style="position:relative; right:40px;">
+            <div class="card-header flex flex-row justify-left" >
+                <h3 class="h4"><small class="text-muted" style="padding-left:20px">Number Of Articles This Week </small></h3>
 
 
             </div>
     <div class="card-body grid grid-cols-2 gap-6 lg:grid-cols-1">
 
-        <div class="p-8">
-            <h1 class="h2">{{nr_articles_week}}</h1>
+        <div class="p-8" >
+
+           <h3 class="h4 " style="float-center"><small class="text-muted" style="padding-left:20px">{{nr_articles_week}}&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbspGsp:&nbsp;&nbsp;&nbsp{{gsp_week_articles}}&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbspProsport:&nbsp;&nbsp;&nbsp{{prosport_week_articles}}</small></h3></center>
 
         </div>
     </div>
-           <div class="card-header flex flex-row justify-center">
-                <h1 class="h6"><center>Number of Articles this Month</center></h1>
+           <div class="card-header flex flex-row justify-left">
+                <h3 class="h4"><small class="text-muted" style="padding-left:20px">Number Of Articles This Month </small></h3>
 
 
             </div>
     <div class="card-body grid grid-cols-2 gap-6 lg:grid-cols-1">
 
         <div class="p-8">
-            <h1 class="h2">{{nr_articles_month}}</h1>
+            <h3 class="h4 " style="float-center"><small class="text-muted" style="padding-left:20px">{{nr_articles_month}}&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbspGsp:&nbsp;&nbsp;&nbsp{{gsp_month_articles}}&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbspProsport:&nbsp;&nbsp;&nbsp{{prosport_month_articles}}</small></h3></center>
 
         </div>
     </div>
