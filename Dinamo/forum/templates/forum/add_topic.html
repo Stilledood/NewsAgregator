@@ -1,0 +1,9 @@
+{% extends parent_template|default:'forum/base_forum.html' %}
+
+{% block content %}
+<form action="{% url 'topic_add' %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Create Topic</button>
+</form>
+{% endblock content %}

@@ -1,0 +1,66 @@
+{% extends parent_template|default:'forum/base_forum.html' %}
+{% block question_link %}
+ <li class="question ">
+            <a class="nav-link" href="{% url 'dj-auth:login' %}?next={{request.path}}" style="padding-left:50px">          </a>
+            </li>
+           <li class="question ">
+            <a class="nav-link" href="{% url 'dj-auth:login' %}?next={{request.path}}" style="padding-left:50px">         </a>
+            </li>
+           <li class="question ">
+            <a class="nav-link" href="{% url 'dj-auth:login' %}?next={{request.path}}" style="padding-left:50px">             </a>
+            </li>
+            {% if perms.forum.add_topics %}
+            <li class="question ">
+            <a class="nav-link" href="{% url 'topic_add' %}" style="padding-left:50px">Add Topic</a>
+            </li>
+            {% endif %}
+{% endblock question_link %}
+{% block content %}
+<nav>
+    <ol class="breadcrumb" style="padding-left:100px">
+        <li class="breadcrumb-item"><a href="{% url 'article_list' %}">Home</a></li>
+        <li class="breadcrumb-item active"><a href="{% url 'forum_generic' %}" >Forum</a></li>
+
+        <li class="breadcrumb-item active">Topics</li>
+
+    </ol>
+</nav>
+<div class="list-group">
+{% for topic in  topics %}
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" >
+
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1" ><p class="text-muted" style="padding-left:80px" >{{topic.title}}</p></h5>
+          <small class="text-muted">{{topic.date_added}}</small>
+
+
+        </div>
+        <p class="mb-1" style="padding-left:80px">{{topic.short_description}}</p>
+          <small class="text-muted" style="padding-left:80px">Posted By: {{topic.posted_by}}</small>
+          <br>
+        <small class="text-muted" style="padding-left:80px">Comments: {{topic.comment_set.count}}</small>
+          <br>
+          <a href="{{topic.get_absolute_url}}" style="padding-lef:80px"><p class="text-primary" style="padding-left:100px">Read more </p></a>
+
+          <br>
+          <br>
+
+
+
+  </a>
+  {% endfor %}
+</div>
+<nav aria-label="Pagination">
+    <hr class="my-0" />
+    <ul class="pagination justify-content-center my-4">
+
+        {% if previous_page_url %}
+        <li class="page-item "><a class="page-link" href="{{previous_page_url}}" tabindex="-1" aria-disabled="true">Newer</a></li>
+        {% endif %}
+        {% if next_page_url %}
+        <li class="page-item"><a class="page-link" href="{{next_page_url}}">Older</a></li>
+        {% endif %}
+    </ul>
+</nav>
+
+{% endblock content %}

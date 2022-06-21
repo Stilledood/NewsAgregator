@@ -1,0 +1,85 @@
+{% extends parent_template|default:'forum/base_forum.html' %}
+{% load static %}
+{% block content %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+
+
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/quill/quill.snow.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/simple-datatables/style.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style3.css' %}" rel="stylesheet">
+
+
+<main id="main" class="main">
+<div class="pagetitle" style="padding-right:50px"  s>
+
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'article_list' %}">Home</a></li>
+                <li class="breadcrumb-item active">Forum</li>
+            </ol>
+        </nav>
+    </div>
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-6">
+              <h5 class="card-title">Latest Topics</h5>
+            <div class="mt-4 grid grid-cols-2 gap-8 xl:grid-cols-2">
+                <div class="flex flex-col">
+                    {% for topic in topics %}
+                        <p class="text-muted"><a href="{{topic.get_absolute_url}}"> {{topic.title}}</a></p>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">Posted By: {{topic.posted_by}}</li>
+                            <li class="breadcrumb-item">Date: {{topic.date_added}}</li>
+                            <li class="breadcrumb-item active">Comments: {{topic.comment_set.count}}</li>
+                        </ol>
+                    {% endfor %}
+                    <button type="button" class="btn btn-outline-secondary"><a href="{% url 'topic_list' %}" >All Topics</a></button>
+
+
+                </div>
+            </div>
+        </div>
+          <div class="col-lg-6">
+              <h5 class="card-title">Latest Questions</h5>
+            <div class="mt-4 grid grid-cols-2 gap-8 xl:grid-cols-2">
+                <div class="flex flex-col">
+                    {% for question in questions %}
+                    <p class="text-muted"><a href="{{topic.get_absolute_url}}"> {{question.title}}</a></p>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">Posted By: {{question.author}}</li>
+                        <li class="breadcrumb-item">Date: {{question.date_added}}</li>
+                        <li class="breadcrumb-item active">Answers: {{question.answers_set.count}}</li>
+                    </ol>
+
+                    {% endfor %}
+                    <button type="button" class="btn btn-outline-secondary"><a href="{% url 'question_list'%}">All Questions</a></button>
+
+
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+
+</main>
+
+{% endblock content %}
