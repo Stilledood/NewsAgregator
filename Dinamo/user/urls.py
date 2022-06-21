@@ -3,7 +3,8 @@ from django.contrib.auth.views import LoginView,LogoutView,PasswordChangeView,Pa
 from django.contrib.auth.forms import AuthenticationForm
 from django.views.generic import RedirectView
 from django.urls import reverse_lazy
-from .views import DisableUser,SignUp,AccountActivation,ProfileDetails,ProfileUpdate
+from .views import DisableUser,SignUp,AccountActivation,ProfileDetails,ProfileUpdate,UserQuestions
+
 
 app_name='user'
 password_urls=[
@@ -26,6 +27,7 @@ urlpatterns=[
     re_path(r'^signup/$',SignUp.as_view(),name='signup'),
     path('activate/<uidb64>/<token>/',AccountActivation.as_view(),name='activate_account'),
     re_path(r'^(?P<username>[\w\-]+)/$',ProfileDetails.as_view(),name='profile_details'),
+    re_path(r'^(?P<username>[\w\-]+)/questions/$',UserQuestions.as_view(),name='user_questions'),
     re_path(r'^(?P<username>[\w\-]+)/edit/$',ProfileUpdate.as_view(),name='profile_update'),
 
 ]
