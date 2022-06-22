@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="Deploy" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2AIHr4JYKxFi6SrHA3vtxQYy9yU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Dinamo/static/assets/img" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static\assets\img" />
+      <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static\js" />
+      <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static\css" />
+      <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static" />
+      <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\media" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\user\templates\user" />
+      <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\media\user_images" />
+      <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static\images" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.agreg">
+    <configuration name="agreg" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="NewsAgregator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Dinamo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Dinamo/agreg.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="exer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="NewsAgregator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Dinamo/agregator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Dinamo/agregator/exer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="NewsAgregator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.exer" />
+        <item itemvalue="Python.agreg" />
+        <item itemvalue="Python.agreg" />
+        <item itemvalue="Python.exer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="" />
+      <created>1654690375050</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654690375050</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added views to see articles based on publishing site">
+      <created>1654967591320</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1654967591320</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added nodels for graph representation">
+      <created>1655028204888</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1655028204888</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added Html Templates for each type of news">
+      <created>1655040073442</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1655040073442</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added View to create the statiscal data and also create the graphs.Yemplate to display statical informations">
+      <created>1655134213134</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1655134213134</updated>
+    </task>
+    <task id="LOCAL-00018" summary="User app-Added UrlPatterns and templates for login">
+      <created>1655213923415</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1655213923415</updated>
+    </task>
+    <task id="LOCAL-00019" summary="User app-Added UrlPatterns and templates for logout">
+      <created>1655214446464</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1655214446464</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added Forum app Models for Topics">
+      <created>1655219173660</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1655219173660</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added Forum app Models for Topics Comments">
+      <created>1655219432864</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1655219432864</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Added Forum app Models for User questions">
+      <created>1655219750362</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1655219750362</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Added Forum app Models for User question answer's">
+      <created>1655220070884</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1655220070884</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Added Forum app Views-Display latest 5 topics and questions">
+      <created>1655220409064</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1655220409064</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added Forum app Views-Topics List">
+      <created>1655220802469</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1655220802469</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Added Forms for Comment and Question Models">
+      <created>1655221069178</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1655221069178</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Added View to display a topic details">
+      <created>1655221396337</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1655221396337</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Added View to display question list,question details">
+      <created>1655223789201</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1655223789201</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Added Url Patterns for forum app">
+      <created>1655224168839</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1655224168840</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Added Forms for Topic,Question Models">
+      <created>1655224373266</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1655224373266</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Added View and Url Pattern for add Topic">
+      <created>1655224729355</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1655224729355</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Added View so the users can add questions on forum">
+      <created>1655272657963</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1655272657963</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Added View to edit questions and topics">
+      <created>1655276427928</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1655276427928</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Added Url Patterns for Topic edit and question edit">
+      <created>1655276645404</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1655276645404</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Added Custom decorators(login required and permission required)">
+      <created>1655293929205</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1655293929205</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Added Password Change and Reset System">
+      <created>1655313967773</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1655313967773</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Added View,Url Pattern and Template for Disable Account Functionality">
+      <created>1655315074043</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1655315074043</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Added Model for User Profile">
+      <created>1655361001284</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1655361001284</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Added Sigmal function to automatically create a Profile objects when a user is created">
+      <created>1655361151196</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1655361151196</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Added metog in Apps.py to load the signals and set the __init__.py to load the AppCOnfig">
+      <created>1655362684495</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1655362684495</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Added SignUpForm and Profile Form">
+      <created>1655363087374</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1655363087374</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Added Sign Up view and a fucntion to generate a token for a new user">
+      <created>1655363951261</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1655363951261</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Added Account Activation View">
+      <created>1655364303561</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1655364303561</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Added Profile Details View">
+      <created>1655364415508</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1655364415508</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Added Profile Update View">
+      <created>1655364644056</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1655364644057</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Added Urls for SignUp,ActivateAccount ,Profile Details and Profile Update">
+      <created>1655364967826</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1655364967826</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Added Conatct app and Contact Form">
+      <created>1655480459438</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1655480459439</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Added View for Contact app">
+      <created>1655480772580</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1655480772580</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Added Url Patterns for Contact App,Added templates for contact Form">
+      <created>1655481805083</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1655481805083</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Added Agregator App Custom Admin Model">
+      <created>1655556260161</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1655556260162</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Added Forum custom admin Models">
+      <created>1655561262449</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1655561262449</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Added View to display each user forum questions">
+      <created>1655826954581</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1655826954581</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Added Urls Pattern for allUser Views">
+      <created>1655826994034</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1655826994034</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Added Templates for agreagator App">
+      <created>1655827026407</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1655827026407</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Added Template for statistics page">
+      <created>1655827075289</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1655827075289</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Added Template for Forum App">
+      <created>1655827118687</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1655827118687</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Added Static Files">
+      <created>1655827179930</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1655827179930</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Added STemplates for User App">
+      <created>1655827241601</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1655827241601</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Modified Graph View and Statistics Template">
+      <created>1655830325848</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1655830325848</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Deploy settings files">
+      <created>1655907453021</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1655907453022</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Deploy settings files">
+      <created>1655910008522</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1655910008522</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Deploy settings files">
+      <created>1655910175506</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1655910175506</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Password Change and Reset System" />
+    <MESSAGE value="Added View,Url Pattern and Template for Disable Account Functionality" />
+    <MESSAGE value="Added Model for User Profile" />
+    <MESSAGE value="Added Sigmal function to automatically create a Profile objects when a user is created" />
+    <MESSAGE value="Added metog in Apps.py to load the signals and set the __init__.py to load the AppCOnfig" />
+    <MESSAGE value="Added SignUpForm and Profile Form" />
+    <MESSAGE value="Added Sign Up view and a fucntion to generate a token for a new user" />
+    <MESSAGE value="Added Account Activation View" />
+    <MESSAGE value="Added Profile Details View" />
+    <MESSAGE value="Added Profile Update View" />
+    <MESSAGE value="Added Urls for SignUp,ActivateAccount ,Profile Details and Profile Update" />
+    <MESSAGE value="Added Conatct app and Contact Form" />
+    <MESSAGE value="Added View for Contact app" />
+    <MESSAGE value="Added Url Patterns for Contact App,Added templates for contact Form" />
+    <MESSAGE value="Added Agregator App Custom Admin Model" />
+    <MESSAGE value="Added Forum custom admin Models" />
+    <MESSAGE value="Added View to display each user forum questions" />
+    <MESSAGE value="Added Urls Pattern for allUser Views" />
+    <MESSAGE value="Added Templates for agreagator App" />
+    <MESSAGE value="Added Template for statistics page" />
+    <MESSAGE value="Added Template for Forum App" />
+    <MESSAGE value="Added Static Files" />
+    <MESSAGE value="Added STemplates for User App" />
+    <MESSAGE value="Modified Graph View and Statistics Template" />
+    <MESSAGE value="Deploy settings files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deploy settings files" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Dinamo/Dinamo/settings.py</url>
+          <line>120</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
