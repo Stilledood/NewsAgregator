@@ -1,1 +1,1 @@
-web: gunicorn Dinamo.wsgi --log-file -
+web: gunicorn Dinamo.wsgi --log-file =-
