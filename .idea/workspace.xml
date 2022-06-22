@@ -140,13 +140,6 @@
       <option name="presentableId" value="Default" />
       <updated>1654690375050</updated>
     </task>
-    <task id="LOCAL-00028" summary="Added View to display question list,question details">
-      <created>1655223789201</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1655223789201</updated>
-    </task>
     <task id="LOCAL-00029" summary="Added Url Patterns for forum app">
       <created>1655224168839</created>
       <option name="number" value="00029" />
@@ -483,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655916401395</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Deploy settings files">
+      <created>1655916558931</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1655916558931</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
