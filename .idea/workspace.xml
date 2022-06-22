@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Dinamo/test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-    </list>
+    <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,20 +137,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654690375050</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Added nodels for graph representation">
-      <created>1655028204888</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1655028204888</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Added Html Templates for each type of news">
-      <created>1655040073442</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1655040073442</updated>
     </task>
     <task id="LOCAL-00017" summary="Added View to create the statiscal data and also create the graphs.Yemplate to display statical informations">
       <created>1655134213134</created>
@@ -484,7 +467,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655914219633</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Deploy settings files">
+      <created>1655914400483</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1655914400483</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Deploy settings files">
+      <created>1655914471925</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1655914471926</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
