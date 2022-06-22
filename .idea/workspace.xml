@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="" />
+    <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Dinamo/Dinamo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/Dinamo/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/test.csv" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Deploy" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
