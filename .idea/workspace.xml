@@ -140,20 +140,6 @@
       <option name="presentableId" value="Default" />
       <updated>1654690375050</updated>
     </task>
-    <task id="LOCAL-00038" summary="Added Model for User Profile">
-      <created>1655361001284</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1655361001284</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Added Sigmal function to automatically create a Profile objects when a user is created">
-      <created>1655361151196</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1655361151196</updated>
-    </task>
     <task id="LOCAL-00040" summary="Added metog in Apps.py to load the signals and set the __init__.py to load the AppCOnfig">
       <created>1655362684495</created>
       <option name="number" value="00040" />
@@ -483,7 +469,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655922129409</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Deploy settings files">
+      <created>1655922575744</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1655922575744</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Deploy settings files">
+      <created>1655922586584</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1655922586584</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
