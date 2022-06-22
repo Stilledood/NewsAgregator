@@ -1,3 +1,3 @@
-web: gunicorn Dinamo.Dinamo.wsgi --log-file - --log-level debug
+web: gunicorn Dinamo.wsgi:Dinamo --log-file - --log-level debug
 python manage.py collectstatic --noinput
 manage.py migrate

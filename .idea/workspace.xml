@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Dinamo/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/runtime.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +53,9 @@
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\media" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\NewsAgregator" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static\assets\img" />
-      <recent name="C:\Users\User\PycharmProjects\NewsAgregator" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\user\templates\user" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\media\user_images" />
     </key>
@@ -143,13 +141,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654690375050</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Added View to edit questions and topics">
-      <created>1655276427928</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1655276427928</updated>
     </task>
     <task id="LOCAL-00034" summary="Added Url Patterns for Topic edit and question edit">
       <created>1655276645404</created>
@@ -487,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655918448554</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Deploy settings files">
+      <created>1655918996401</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1655918996401</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
