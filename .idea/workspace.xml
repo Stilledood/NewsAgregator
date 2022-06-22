@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/templates/400.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/templates/400.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,13 +141,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654690375050</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Added Forum app Models for User questions">
-      <created>1655219750362</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1655219750362</updated>
     </task>
     <task id="LOCAL-00023" summary="Added Forum app Models for User question answer's">
       <created>1655220070884</created>
@@ -485,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655915389306</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Deploy settings files">
+      <created>1655915477808</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1655915477808</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
