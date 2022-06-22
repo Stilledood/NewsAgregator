@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/Procfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +54,8 @@
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\media" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\PycharmProjects\NewsAgregator" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo" />
+      <recent name="C:\Users\User\PycharmProjects\NewsAgregator" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static\assets\img" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\user\templates\user" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\media\user_images" />
@@ -141,20 +142,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654690375050</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Added Custom decorators(login required and permission required)">
-      <created>1655293929205</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1655293929205</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Added Password Change and Reset System">
-      <created>1655313967773</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1655313967773</updated>
     </task>
     <task id="LOCAL-00037" summary="Added View,Url Pattern and Template for Disable Account Functionality">
       <created>1655315074043</created>
@@ -485,7 +472,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655920589082</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Deploy settings files">
+      <created>1655920826051</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1655920826051</updated>
+    </task>
+    <task id="LOCAL-00085" summary="Deploy settings files">
+      <created>1655920961557</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1655920961557</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
