@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,11 +53,11 @@
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\media" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static\assets\img" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\user\templates\user" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\media\user_images" />
-      <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static\images" />
     </key>
   </component>
   <component name="RunManager" selected="Python.agreg">
@@ -141,13 +141,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654690375050</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Added Forms for Topic,Question Models">
-      <created>1655224373266</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1655224373266</updated>
     </task>
     <task id="LOCAL-00031" summary="Added View and Url Pattern for add Topic">
       <created>1655224729355</created>
@@ -485,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655917086647</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Deploy settings files">
+      <created>1655917979203</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1655917979203</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
