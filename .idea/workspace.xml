@@ -3,11 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/Dinamo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/Dinamo/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dinamo/agregator/templates/agregator/statistic.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/agregator/templates/agregator/statistic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dinamo/static/css/owl.css" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/static/css/owl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dinamo/static/css/templatemo-sixteen.css" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/static/css/templatemo-sixteen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dinamo/staticfiles/css/owl.css" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/staticfiles/css/owl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dinamo/staticfiles/css/templatemo-sixteen.css" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/staticfiles/css/templatemo-sixteen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/staticfiles/staticfiles.json" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/staticfiles/staticfiles.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/templates/400.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/templates/400.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/templates/403.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/templates/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/templates/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/templates/500.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +49,13 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Dinamo/static/assets/img" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\PycharmProjects\NewsAgregator" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static\assets\img" />
+      <recent name="C:\Users\User\PycharmProjects\NewsAgregator" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static\js" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static\css" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static" />
@@ -146,13 +149,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654690375050</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Added Urls Pattern for allUser Views">
-      <created>1655826994034</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1655826994034</updated>
     </task>
     <task id="LOCAL-00054" summary="Added Templates for agreagator App">
       <created>1655827026407</created>
@@ -490,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655992371051</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Deploy settings files">
+      <created>1655992932876</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1655992932876</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
