@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Dinamo/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,13 +139,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654690375050</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Added View for Contact app">
-      <created>1655480772580</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1655480772580</updated>
     </task>
     <task id="LOCAL-00049" summary="Added Url Patterns for Contact App,Added templates for contact Form">
       <created>1655481805083</created>
@@ -485,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655979744501</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="Deploy settings files">
+      <created>1655991435515</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1655991435516</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -537,7 +535,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Dinamo/Dinamo/settings.py</url>
-          <line>121</line>
+          <line>122</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
