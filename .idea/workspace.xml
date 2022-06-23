@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dinamo/requierements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/agregator/templates/agregator/statistic.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/agregator/templates/agregator/statistic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/static/css/owl.css" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/static/css/owl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/static/css/templatemo-sixteen.css" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/static/css/templatemo-sixteen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/staticfiles/css/owl.css" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/staticfiles/css/owl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/staticfiles/css/templatemo-sixteen.css" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/staticfiles/css/templatemo-sixteen.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,20 +146,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654690375050</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Added Forum custom admin Models">
-      <created>1655561262449</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1655561262449</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Added View to display each user forum questions">
-      <created>1655826954581</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1655826954581</updated>
     </task>
     <task id="LOCAL-00053" summary="Added Urls Pattern for allUser Views">
       <created>1655826994034</created>
@@ -487,7 +476,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655991896358</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Deploy settings files">
+      <created>1655992232192</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1655992232192</updated>
+    </task>
+    <task id="LOCAL-00101" summary="Deploy settings files">
+      <created>1655992371051</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1655992371051</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
