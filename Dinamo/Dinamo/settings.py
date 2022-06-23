@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'user',
     'forum',
     'contact',
+    'whitenoise.runserver_nostatic',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
@@ -136,7 +137,7 @@ STATICFILES_DIRS=[
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 MEDIA_URL='media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 SITE_ID=1
 
 # Default primary key field type
