@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath Dinamo Dinamo.wsgi --log-file -
