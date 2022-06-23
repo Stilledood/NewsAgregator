@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 from django.urls import reverse_lazy
+import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8sj&*+kce%^)1wt+d4-o%ug%aghembn-zd+hn+kzyh^v#)6sab'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -154,3 +155,4 @@ MANAGERS=[
     ('Us','ourselves@dinamonews.ro'),
 ]
 
+django_heroku.settings(locals())
