@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dinamo/Dinamo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/Dinamo/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dinamo/agregator/templates/agregator/statistic.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/agregator/templates/agregator/statistic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dinamo/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dinamo/staticfiles/staticfiles.json" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/staticfiles/staticfiles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dinamo/templates/400.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/templates/400.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dinamo/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/templates/403.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dinamo/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/templates/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dinamo/templates/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/templates/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/Dinamo/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/Dinamo/wsgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,13 +142,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654690375050</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Added Templates for agreagator App">
-      <created>1655827026407</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1655827026407</updated>
     </task>
     <task id="LOCAL-00055" summary="Added Template for statistics page">
       <created>1655827075289</created>
@@ -493,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655992932876</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="Deploy settings files">
+      <created>1655994907790</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1655994907790</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
