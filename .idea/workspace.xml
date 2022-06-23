@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dinamo/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,16 +42,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Dinamo/static/assets/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\NewsAgregator" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static\assets\img" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static\js" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static\css" />
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\static" />
-      <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo\media" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\PycharmProjects\NewsAgregator\Dinamo" />
@@ -141,27 +142,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654690375050</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Added Account Activation View">
-      <created>1655364303561</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1655364303561</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Added Profile Details View">
-      <created>1655364415508</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1655364415508</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Added Profile Update View">
-      <created>1655364644056</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1655364644057</updated>
     </task>
     <task id="LOCAL-00046" summary="Added Urls for SignUp,ActivateAccount ,Profile Details and Profile Update">
       <created>1655364967826</created>
@@ -485,7 +465,28 @@
       <option name="project" value="LOCAL" />
       <updated>1655958157437</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Deploy settings files">
+      <created>1655978319180</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1655978319180</updated>
+    </task>
+    <task id="LOCAL-00093" summary="Deploy settings files">
+      <created>1655978438203</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1655978438203</updated>
+    </task>
+    <task id="LOCAL-00094" summary="Deploy settings files">
+      <created>1655978530417</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1655978530417</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
