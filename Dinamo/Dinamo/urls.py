@@ -27,7 +27,7 @@ from django.contrib import admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'^$',RedirectView.as_view(pattern_name='article_list',permanent=False)),
+    path('',RedirectView.as_view(pattern_name='article_list',permanent=False)),
     re_path(r'^news/',include(agg_urls)),
     re_path(r'^user/',include(user_urls,namespace='dj-auth')),
     re_path(r'forum/',include(forum_urls)),
