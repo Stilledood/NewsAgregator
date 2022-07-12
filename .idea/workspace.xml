@@ -142,20 +142,6 @@
       <option name="presentableId" value="Default" />
       <updated>1654690375050</updated>
     </task>
-    <task id="LOCAL-00075" summary="Deploy settings files">
-      <created>1655916103091</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1655916103091</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Deploy settings files">
-      <created>1655916401395</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1655916401395</updated>
-    </task>
     <task id="LOCAL-00077" summary="Deploy settings files">
       <created>1655916558931</created>
       <option name="number" value="00077" />
@@ -485,7 +471,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657642841686</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="Deploy settings files">
+      <created>1657643221918</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1657643221918</updated>
+    </task>
+    <task id="LOCAL-00125" summary="Deploy settings files">
+      <created>1657643463591</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1657643463591</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
