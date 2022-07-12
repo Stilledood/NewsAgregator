@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Dinamo/agregator/management/commands/startjobs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/agregator/management/commands/startjobs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dinamo/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,13 +142,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654690375050</updated>
-    </task>
-    <task id="LOCAL-00064" summary="Deploy settings files">
-      <created>1655914400483</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1655914400483</updated>
     </task>
     <task id="LOCAL-00065" summary="Deploy settings files">
       <created>1655914471925</created>
@@ -485,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657637645440</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="Deploy settings files">
+      <created>1657638182682</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1657638182682</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
