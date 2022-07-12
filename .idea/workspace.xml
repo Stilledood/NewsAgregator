@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2c8f856c-e417-42a5-9263-09173b15be2d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/Dinamo/agregator/management/commands/startjobs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/agregator/management/commands/startjobs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dinamo/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Dinamo/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,20 +141,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654690375050</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Deploy settings files">
-      <created>1655914471925</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1655914471926</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Deploy settings files">
-      <created>1655914925290</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1655914925290</updated>
     </task>
     <task id="LOCAL-00067" summary="Deploy settings files">
       <created>1655915151044</created>
@@ -486,7 +471,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657638182682</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Deploy settings files">
+      <created>1657638401740</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1657638401740</updated>
+    </task>
+    <task id="LOCAL-00115" summary="Deploy settings files">
+      <created>1657638420231</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1657638420231</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -80,8 +80,8 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         scheduler=BlockingScheduler(timezone=settings.TIME_ZONE)
         scheduler.add_jobstore(DjangoJobStore(),'default')
-        scheduler.add_job(fetch_gsp_articles,trigger='interval',minutes=60,id='Gsp Articles',max_instances=1,replace_existing=True)
-        scheduler.add_job(fetch_prosport_article,trigger='interval',minutes=60,id='Prosport Articles',max_instances=1,replace_existing=True)
+        scheduler.add_job(fetch_gsp_articles,trigger='interval',minutes=2,id='Gsp Articles',max_instances=1,replace_existing=True)
+        scheduler.add_job(fetch_prosport_article,trigger='interval',minutes=2,id='Prosport Articles',max_instances=1,replace_existing=True)
 
 
         try:
