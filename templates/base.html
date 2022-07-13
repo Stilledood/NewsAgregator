@@ -1,0 +1,91 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dinamo Bucuresti</title>
+
+
+
+
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/litera/bootstrap.min.css" integrity="sha384-enpDwFISL6M3ZGZ50Tjo8m65q06uLVnyvkFO3rsoW0UC15ATBFz3QEhr3hmxpYsn" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'article_list' %}">Dinamo Bucuresti</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'article_list' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'statistics' %}">Statistics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'gsp_articles' %}">Gsp Articles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'prosport_articles' %}">ProSport Articles</a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'forum_generic' %}">Forum</a>
+        </li>
+          {% if user.is_authenticated  %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'dj-auth:logout' %}">Log Out</a>
+            </li>
+          {% if user.profile.username %}
+              <li class="nav-item">
+              <a class="nav-link" href="{{user.profile.get_absolute_url}}">Profile</a>
+            </li>
+          {% endif %}
+          {% else %}
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'dj-auth:login' %}?next={{request.path}}">Log In</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'dj-auth:signup' %}">Register</a>
+          </li>
+          {% endif %}
+
+
+
+      <form class="d-flex" >
+        <input class="form-control me-sm-2" type="text" placeholder="Search" >
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+          {% block question_link%}
+          {% endblock question_link %}
+
+
+    </ul>
+    </div>
+  </div>
+</nav>
+        <header class="py-5 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">Dinamo News</h1>
+                    <p class="lead mb-0">A simple News Agregator</p>
+                </div>
+            </div>
+        </header>
+        {% block content %}
+        {% endblock content %}
+
+</html>

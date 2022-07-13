@@ -1,0 +1,103 @@
+{% extends parent_template|default:'forum/base_forum.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container-fluid mt-100">
+     <div class="row">
+         <div class="col-md-12">
+             <div class="card mb-4">
+
+
+                 <div class="card-header">
+                      <p class="text-muted" style="padding-left:15px">{{topic.title}}</p>
+
+                     <div class="media flex-wrap w-100 align-items-center"> <img src="{{topic.posted_by.image}}" class="d-block ui-w-40 rounded-circle" alt="">
+
+                         <div class="media-body ml-3"> <a href="javascript:void(0)" data-abc="true">{{topic.posted_by}}</a>
+                             <div class="text-muted small">{{topic.date_added}}</div>
+
+                         </div>
+                         <div class="text-muted small ml-3">
+
+                             <div><strong>{{topic.posted_by.topics_set.count}}</strong> posts</div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="card-body" style="padding-left:35px">
+                     <p> For me, getting my business website made was a lot of tech wizardry things. Thankfully i get an ad on Facebook ragarding commence website. I get connected with BBB team. They made my stunning website live in just 3 days.
+                         With the increase demand of online customers. I had to take my business online. BBB Team guided me at each step and enabled me to centralise my work and have control on all aspect of my online business.
+                     </p>
+                     <p> For me, getting my business website made was a lot of tech wizardry things. Thankfully i get an ad on Facebook ragarding commence website. I get connected with BBB team. They made my stunning website live in just 3 days.
+                         With the increase demand of online customers. I had to take my business online. BBB Team guided me at each step and enabled me to centralise my work and have control on all aspect of my online business.
+                     </p>
+                 </div>
+
+             </div>
+         </div>
+     </div>
+ </div>
+
+<br>
+
+<p class="text-muted" style="padding-left:50px">Comments: </p>
+{% for comm in topic.comment_set.all %}
+    <div class="container-fluid mt-60">
+         <div class="row">
+             <div class="col-md-10" style="padding-left:280px">
+                 <div class="card mb-4">
+
+
+                     <div class="card-header">
+
+                         {% if comm.author.profile.image %}
+                         <div class="media flex-wrap w-100 align-items-center"> <img src="{{comm.author.profile.image.url}}" class="d-block ui-w-40 rounded-circle" alt="" width="=40" height="40">
+                         {% endif %}
+                             <div class="media-body ml-3"> <a href="javascript:void(0)" data-abc="true">{{comm.author}}</a>
+                                 <div class="text-muted small">{{comm.date_added}}</div>
+
+                             </div>
+
+                         </div>
+                     </div>
+                     <div class="card-body" style="padding-left:35px">
+                         <p> {{comm.body}}
+                         </p>
+
+                     </div>
+                     <br>
+                     <br>
+
+                 </div>
+             </div>
+         </div>
+     </div>
+
+{% endfor %}
+<section class="section" style="padding-left:100px">
+      <div class="row">
+        <div class="col-lg-8">
+              <p class="text-muted"">Post a comment</p>
+            <div class="mt-2 grid grid-cols-2 gap-8 xl:grid-cols-2">
+                <div class="flex flex-col">
+                    {% if user.is_authenticated %}
+                    <form method="post" action="{% url 'topic_details' topic.pk %}">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="form-group col-md-6 mb-0">
+                                {{ form.body|as_crispy_field }}
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="height:50px "  s>Reply</button>
+                    </form>
+                    {% else %}
+                        <p class="text-muted"> Please log in /register to post a comment</p>
+                    <button type="button" class="btn btn-outline-primary ><a href="{% url 'dj-auth:login' %}"> Log In</a></button> <button type="button" class="btn btn-outline-primary"><a href="{% url 'dj-auth:signup' %}">Register</a></button>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+      </div>
+</section>
+{% endblock content %}
