@@ -35,14 +35,11 @@ def save_new_articles(feed):
                     article=Article(title=item['title'],description=item['summary'],publishing_site=feed_title,publishing_date=parser.parse(item['published'][:-5]),link=item['link'],image=item['links'][1]['href'],guid=item['gsp_articol_id'])
                     print(article.title)
                     article.save()
-            elif feed_title == 'Prosport':
-                x=item['id']
-                m=re.match('.*?([0-9]+)$',x).group(1)
-                if not Article.objects.filter(guid=m).exists():
-                    article = Article(title=item['title'], description=item['summary'], publishing_site=feed_title,
-                                      publishing_date=parser.parse(item['published'][:-5]), link=item['link'],
-                                      image=item['links'][1]['href'], guid=m)
-                    article.save()
+            elif feed_title == 'Prosport':     
+                article = Article(title=item['title'], description=item['summary'], publishing_site=feed_title,
+                                  publishing_date=parser.parse(item['published'][:-5]), link=item['link'],
+                                  image=item['links'][1]['href'], guid=m)
+                article.save()
 
 
 
