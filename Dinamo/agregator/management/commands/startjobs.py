@@ -38,7 +38,7 @@ def save_new_articles(feed):
             elif feed_title == 'Prosport':     
                 article = Article(title=item['title'], description=item['summary'], publishing_site=feed_title,
                                   publishing_date=parser.parse(item['published'][:-5]), link=item['link'],
-                                  image=item['links'][1]['href'], guid=m)
+                                  image=item['links'][1]['href'], guid='a')
                 article.save()
 
 
