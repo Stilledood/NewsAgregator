@@ -13,7 +13,7 @@ class Article(models.Model):
     publishing_site=models.CharField(max_length=128)
     publishing_date=models.DateField()
     link=models.URLField(max_length=256)
-    guid=models.CharField(max_length=50)
+    guid=models.CharField(max_length=255)
 
 
 
