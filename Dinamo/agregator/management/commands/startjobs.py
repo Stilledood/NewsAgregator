@@ -32,12 +32,12 @@ def save_new_articles(feed):
             if feed_title == 'GSP':
                 guid_gsp=item['gsp_articol_id']
                 if len(Article.objects.filter(guid=guid_gsp)) == 0:
-                    article=Article(title=item['title'],description=item['summary'],publishing_site=feed_title,publishing_date=parser.parse(item['published'][:-5]),link=item['link'],image=item['links'][1]['href'],guid=item['gsp_articol_id'])
+                    article=Article(title=item['title'],description=item['summary'],publishing_site=feed_title,publishing_date=parser.parse(item['published']),link=item['link'],image=item['links'][1]['href'],guid=item['gsp_articol_id'])
                     print(article.title)
                     article.save()
             elif feed_title == 'Prosport':     
                 article = Article(title=item['title'], description=item['summary'], publishing_site=feed_title,
-                                  publishing_date=parser.parse(item['published'][:-5]), link=item['link'],
+                                  publishing_date=parser.parse(item['published']), link=item['link'],
                                   image=item['links'][1]['href'], guid='a')
                 article.save()
 
