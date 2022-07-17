@@ -7,7 +7,7 @@ from django.conf import settings
 class Article(models.Model):
     '''Class to create a model for all news article'''
 
-    title=models.CharField(max_length=255)
+    title=models.TextField()
     image=models.ImageField(upload_to='news_images')
     description=models.TextField()
     publishing_site=models.CharField(max_length=255)
