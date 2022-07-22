@@ -10,10 +10,10 @@ class Article(models.Model):
     title=models.TextField()
     image=models.ImageField(upload_to='news_images')
     description=models.TextField()
-    publishing_site=models.CharField(max_length=128)
+    publishing_site=models.TextField()
     publishing_date=models.DateTimeField()
     link=models.URLField(max_length=256)
-    guid=models.CharField(max_length=255)
+    guid=models.TextField()
 
 
 
