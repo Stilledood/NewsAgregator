@@ -12,7 +12,7 @@ class Article(models.Model):
     description=models.TextField()
     publishing_site=models.TextField()
     publishing_date=models.DateTimeField()
-    link=models.URLField(max_length=256)
+    link=models.URLField(max_length=1000)
     guid=models.TextField()
 
 
