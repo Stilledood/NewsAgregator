@@ -8,7 +8,7 @@ class Article(models.Model):
     '''Class to create a model for all news article'''
 
     title=models.TextField()
-    image=models.ImageField(upload_to='news_images')
+    image=models.ImageField(upload_to='news_images',max_lenght=1000)
     description=models.TextField()
     publishing_site=models.TextField()
     publishing_date=models.DateTimeField()
